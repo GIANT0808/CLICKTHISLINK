@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Important Question 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        #startBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        #yes {
+            background-color: #ff4d6d;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+        }
+
+        #no {
+            background-color: #cccccc;
+        }
+
+        .envelope-area {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        #envelope {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.8s ease;
+        }
+
+        #envelope.open {
+            transform: rotateX(20deg) scale(0.9);
+        }
+
+        #message1 {
+            background: #fffaf0;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            max-width: 500px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.8s ease;
+        }
+
+        #message1.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #message1 p {
+            color: #333;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+            text-indent: 30px;
+            text-align: justify;
+        }
+
+        #nextBtn {
+            background-color: #ff4d6d;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        #nextBtn.show {
+            opacity: 1;
+        }
+
+        #letter {
+            background: #fffaf0;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            max-width: 300px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.8s ease;
+        }
+
+        #letter.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #letter p {
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        #message {
+            display: none;
+            font-size: 24px;
+            color: #ff4d6d;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Floating Hearts */
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .hearts span {
+            position: absolute;
+            font-size: 24px;
+            animation: float 10s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(100vh);
+            }
+            to {
+                transform: translateY(-10vh);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<div class="container">
+    <h1>Hello hehehe :p</h1>
+
+    <button id="startBtn" onclick="openEnvelope()">...</button>
+
+    <div class="envelope-area">
+        <!-- Replace "envelope.png" with your actual image file name -->
+        <img src="envelope.jpg.jpg" id="envelope" alt="Envelope">
+    </div>
+
+    <div id="message1">
+        <p>
+            My Dearest, Maxinne. I greet you a happy day as I make this letter this late because you refused to let me go home early. 
+            I'm not blaming you, just saying :p. First of all, I will have to apologize if this letter may seem informal, 
+            especially to you, who prefers handwritten letters. Well, it has been four years of a tumultuous relationship; 
+            we endured sadness, hate, resentment, and most importantly, love. Yes, my love, we endured, and I'm so proud of us. 
+            I'm awed at how far we've come from enduring endless hardships not just for our relationship but for ourselves as well. 
+            We managed to grow together and apart at the same time, and it's so freaking awesome, my love. I love you so much. 
+            Ahead of us is a milestone for our relationship, sixty months of loving that yapper mouth and blackhole of a stomach, 
+            yet it feels like it all happened in a blink of an eye. It's so fascinating how love changes our perception of time; 
+            we were just teenagers, and now we are already one step on the journey of being full-fledged adults. 
+            Now, this may not fit inside the code I made, so I have to cut it short. I know you don't need me to tell everything in this letter 
+            because words themselves isn't enough to express the bond we've built throughout the years of us being together, 
+            so temporarily this will be the end of this letter. I love you, Maxinne, my Luna.
+
+
+            
+        </p>
+    </div>
+
+    <button id="nextBtn" onclick="showLetter()">...</button>
+
+    <div id="letter">
+        <p>
+            My wifey, love, baby, mahal, antukin<br><br>
+            You know how improtant your existence is to me<br><br>
+            So I have to ask…<br><br>
+            <strong style="color: #ff4d6d; font-size: 1.1em;">Will you be my Valentine?</strong>
+        </p>
+
+        <div id="buttons">
+            <button id="yes" onclick="sayYes()">Yes</button>
+            <button id="no" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <div id="message">
+        YAAAAAAAAYYYYY! I LOVE YOU SO MUCHIE MY BABY :>>
+    </div>
+</div>
+
+<script>
+function openEnvelope() {
+    // Hide the start button and heading
+    document.getElementById("startBtn").classList.add("hidden");
+    document.querySelector("h1").classList.add("hidden");
+    
+    // Animate envelope
+    document.getElementById("envelope").classList.add("open");
+    
+    // Show first message after delay
+    setTimeout(() => {
+        document.getElementById("message1").classList.add("show");
+        document.getElementById("nextBtn").classList.add("show");
+    }, 500);
+}
+
+function showLetter() {
+    // Hide the first message and button
+    document.getElementById("message1").classList.add("hidden");
+    document.getElementById("nextBtn").classList.add("hidden");
+    
+    // Show the letter
+    document.getElementById("letter").classList.add("show");
+}
+
+function sayYes() {
+    document.getElementById("letter").classList.add("hidden");
+    document.getElementById("message").style.display = "block";
+}
+
+function moveButton() {
+    const button = document.getElementById("no");
+    const container = document.querySelector(".container");
+    
+    // Get container dimensions
+    const containerRect = container.getBoundingClientRect();
+    
+    // Random position within container
+    const maxX = containerRect.width - 150;
+    const maxY = containerRect.height - 100;
+    
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+    
+    button.style.position = "absolute";
+    button.style.left = randomX + "px";
+    button.style.top = randomY + "px";
+}
+
+// Generate floating hearts
+const heartsContainer = document.querySelector(".hearts");
+
+for (let i = 0; i < 15; i++) {
+    const heart = document.createElement("span");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    heart.style.fontSize = (20 + Math.random() * 20) + "px";
+    heart.style.animationDelay = Math.random() * 5 + "s";
+    heartsContainer.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
